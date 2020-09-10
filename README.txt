@@ -4,9 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
-
-  - _TODO: Enter the playbook file._
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat. 
 
 This document contains the following details:
 - Description of the Topology
@@ -95,12 +93,13 @@ Images/metricbeat_example-2020-09-03 01_50_45-Discover - Kibana
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the `<install-elk.yml>` file to `</etc/ansible>`.
-- Update the _____ file to include...
-- Run the playbook, and navigate to <ELK machine IP Addr>:5601 to check that the installation worked as expected.
+- Copy the ```<install-elk.yml>``` file to ```</etc/ansible>```.
+- Update the ```install-elk.yml``` file to include filebeat and metricbeat
+- Run the playbook, and navigate to ```<ELK machine IP Addr>:5601``` to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+- _Which file is the playbook? Where do you copy it?
+    - you copy it into 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
