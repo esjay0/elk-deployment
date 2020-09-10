@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Image](Images/docker_ps-root@ELK-Stack-VM_ ~.png)
+![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/docker_ps-root%40ELK-Stack-VM_%20%7E.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat. 
 
