@@ -81,11 +81,13 @@ These Beats allow us to collect the following information from each machine:
 - FileBeat
 	- Allows for collection of system log data from our DVWA machines
 	- eg. any root login attempts will be logged, collected, and transmitted to our ELK stack via port 9200
-![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/filebeat_example-2020-09-03 01_45_56-Discover - Kibana.png)
+
+![Image](Images/filebeat_kibana)
+
 - MetricBeat
 	- Allows for collection of various server metrics such as system CPU, memory, processes, etc.
 	- eg. total virtual memory of our machine
-![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/metricbeat_example-2020-09-03 01_50_45-Discover - Kibana.png)
+![Image](Images/metricbeat_kibana)
 
 ### Using the Playbook
 
