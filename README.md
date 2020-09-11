@@ -87,7 +87,7 @@ These Beats allow us to collect the following information from each machine:
 - MetricBeat
 	- Allows for collection of various server metrics such as system CPU, memory, processes, etc.
 	- eg. total virtual memory of our machine
-![Image](Images/metricbeat_kiban://github.com/rin-0x91/elk-deployment/blob/master/Images/metricbeat_kibana.png)
+![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/metricbeat_kibana.png)
 
 ### Using the Playbook
 
