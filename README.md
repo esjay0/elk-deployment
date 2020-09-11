@@ -45,13 +45,13 @@ The internal network IP of our Jump Box is 10.0.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name          | Internet Facing | Allowed IP Addresses  |   |   |
-|---------------|-----------------|-----------------------|---|---|
-| Jump Box      | Yes             | Client/LocalHost:22   |   |   |
-| Web1          | No              | 10.0.0.4 via Docker   |   |   |
-| Web2          | No              | 10.0.0.4 via Docker   |   |   |
-| ELK-VM        | Yes             | Client/LocalHost:5601 |   |   |
-| Load Balancer | Yes             | All                   |   |   |
+| Name          | Internet Facing | Allowed IP Addresses     |
+|---------------|-----------------|--------------------------|
+| Jump Box      | Yes             | Client/LocalHost:22      |
+| Web1          | No              | 10.0.0.4 via Docker      |
+| Web2          | No              | 10.0.0.4 via Docker      |
+| ELK-VM        | Yes             | Client/LocalHost:5601    |
+| Load Balancer | Yes             | All                      |
 
 ### Elk Configuration
 
@@ -65,9 +65,9 @@ The playbook implements the following tasks:
 - Downloads ELK image: sebp/elk:761
 - Launch docker and run container running sebp/elk:761
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+The following screenshot displays the result of running ```docker ps` after successfully``` configuring the ELK instance.
 
-Images/docker_ps-root@ELK-Stack-VM_ ~.png
+![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/dockerps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -82,25 +82,16 @@ These Beats allow us to collect the following information from each machine:
 - FileBeat
 	- Allows for collection of system log data from our DVWA machines
 	- eg. any root login attempts will be logged, collected, and transmitted to our ELK stack via port 9200
-Images/filebeat_example-2020-09-03 01_45_56-Discover - Kibana
-
+![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/filebeat_example-2020-09-03 01_45_56-Discover - Kibana.png)
 - MetricBeat
 	- Allows for collection of various server metrics such as system CPU, memory, processes, etc.
 	- eg. total virtual memory of our machine
-Images/metricbeat_example-2020-09-03 01_50_45-Discover - Kibana
+![Image](https://github.com/rin-0x91/elk-deployment/blob/master/Images/metricbeat_example-2020-09-03 01_50_45-Discover - Kibana.png)
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 SSH into the control node and follow the steps below:
-- Copy the ```<install-elk.yml>``` file to ```</etc/ansible>```.
+- Copy the ```install-elk.yml``` file to ```/etc/ansible/```.
 - Update the ```install-elk.yml``` file to include filebeat and metricbeat
 - Run the playbook, and navigate to ```<ELK machine IP Addr>:5601``` to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?
-    - you copy it into 
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
